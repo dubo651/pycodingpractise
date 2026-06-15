@@ -1,0 +1,26 @@
+import numpy as np
+import matplotlib
+import matplotlib.pyplot as plt
+matplotlib.rcParams['font.family']='SimHei'  #显示汉字
+matplotlib.rcParams['font.sans-serif'] = ['SimHei']
+
+def tsxs():
+    xsje =[120047,305676,485102,515088,984511,1894756,2268775]   #图书销售金额
+    nf = np.arange(2013,2020)     #设置x轴的标签    
+    ###  1.补充代码 Begin  ###
+    #设置x轴的位置
+    x_pos=nf
+    #设置x轴的标签为2013-2019年
+    plt.xticks(nf,nf)
+    #绘制条形图
+    plt.bar(x_pos,xsje,width=0.5,align='center')
+       #设置标题   
+    plt.title('2013-2019年网上图书销售金额') 
+    #设置横坐标
+    plt.xlabel('年份')
+    
+    ###  1.End  ###
+    plt.ylabel('图书销售金额（元）')  #设置纵坐标    
+    plt.show()
+    plt.savefig('image1/tsxs.png')
+tsxs()    
